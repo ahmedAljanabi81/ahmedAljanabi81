@@ -192,6 +192,7 @@ int serial_usart_buffer_count(volatile SERIAL_USART_BUFFER *usart_buf) {
     return count;
 }
 
+/* 2022 old stuff removed
 void serial_usart_buffer_push(volatile SERIAL_USART_BUFFER *usart_buf, SERIAL_USART_IT_BUFFERTYPE value) {
     int count = serial_usart_buffer_count(usart_buf);
     if (count >=  SERIAL_USART_BUFFER_SIZE-2){
@@ -211,6 +212,7 @@ SERIAL_USART_IT_BUFFERTYPE serial_usart_buffer_pop(volatile SERIAL_USART_BUFFER 
   }
   return t;
 }
+*/
 
 void serial_usart_buffer_flush(volatile SERIAL_USART_BUFFER *usart_buf) {
   usart_buf->tail = usart_buf->head;
